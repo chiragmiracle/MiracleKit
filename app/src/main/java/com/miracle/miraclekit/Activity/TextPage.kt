@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -53,10 +52,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.miracle.miraclekit.R
-import com.miracle.miraclekit.ui.theme.Divider_Clr
+import com.miracle.miraclekit.SpaceLine
 import com.miracle.miraclekit.ui.theme.MiracleTheme
 import com.miracle.miraclekit.ui.theme.Theme_Clr
-import com.miracle.miraclekit.ui.theme.White
 
 class TextPage : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -149,22 +147,21 @@ class TextPage : ComponentActivity() {
         }
     }
 
-    @Composable
-    fun SpaceLine() {
-        Spacer(modifier = Modifier.height(10.dp))
-        Divider(color = Divider_Clr, thickness = 1.dp)
-        Spacer(modifier = Modifier.height(10.dp))
-    }
-
 
     @Composable
     fun SimpleText() {
-        Text("Simple Text")
+        Text(
+            "Simple Text",
+            color = Color.Black
+        )
     }
 
     @Composable
     fun StringResourceText() {
-        Text(stringResource(R.string.StringResourceText))
+        Text(
+            stringResource(R.string.StringResourceText),
+            color = Color.Black
+        )
     }
 
     @Composable

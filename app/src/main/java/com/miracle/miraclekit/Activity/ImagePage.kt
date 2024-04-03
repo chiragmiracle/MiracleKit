@@ -55,6 +55,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.miracle.miraclekit.R
+import com.miracle.miraclekit.SmallTextDescription
+import com.miracle.miraclekit.SpaceLine
+import com.miracle.miraclekit.TitleText
 import com.miracle.miraclekit.ui.theme.Divider_Clr
 import com.miracle.miraclekit.ui.theme.MiracleTheme
 import com.miracle.miraclekit.ui.theme.Theme_Clr
@@ -119,23 +122,23 @@ class ImagePage : ComponentActivity() {
                     .padding(10.dp)
             ) {
 
-                titleText("Icon :")
+                TitleText("Icon :")
                 IconIMG()
                 SpaceLine()
 
-                titleText("Simple Image :")
+                TitleText("Simple Image :")
                 SimpleImage()
                 SpaceLine()
 
-                titleText("Shape Image :")
+                TitleText("Shape Image :")
                 ShapeImageView()
                 SpaceLine()
 
-                titleText("Fit Image :")
+                TitleText("Fit Image :")
                 InsideFitImage()
                 SpaceLine()
 
-                titleText("Image Color Filter :")
+                TitleText("Image Color Filter :")
                 ImgColorFilter()
                 SpaceLine()
 
@@ -145,29 +148,8 @@ class ImagePage : ComponentActivity() {
 
 
     @Composable
-    fun SpaceLine() {
-        Spacer(modifier = Modifier.height(10.dp))
-        Divider(color = Divider_Clr, thickness = 1.dp)
-        Spacer(modifier = Modifier.height(10.dp))
-    }
-
-    @Composable
-    private fun titleText(text: String) {
-        Text(
-            text = text,
-            modifier = Modifier
-                .fillMaxWidth(),
-            color = Color.Black,
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.Start,
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-    }
-
-    @Composable
     fun IconIMG() {
-        TextDescription(stringResource(id = R.string.Icon1))
+        SmallTextDescription(stringResource(id = R.string.Icon1))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
@@ -175,12 +157,14 @@ class ImagePage : ComponentActivity() {
 
             Icon(
                 imageVector = Icons.Default.ArrowBack,
+                tint = Color.Black,
                 contentDescription = "Set Default Icon"
             )
             Spacer(modifier = Modifier.width(15.dp))
             Icon(
                 painter = painterResource(id = R.drawable.ic_back),
                 contentDescription = "Icon Drawable",
+                tint = Color.Black,
                 modifier = Modifier
                     .size(30.dp)
                     .padding(5.dp)
@@ -226,7 +210,7 @@ class ImagePage : ComponentActivity() {
 
     @Composable
     fun ShapeImageView() {
-        TextDescription(stringResource(id = R.string.Icon2))
+        SmallTextDescription(stringResource(id = R.string.Icon2))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
@@ -284,7 +268,7 @@ class ImagePage : ComponentActivity() {
 
     @Composable
     fun InsideFitImage() {
-        TextDescription(stringResource(id = R.string.Icon3))
+        SmallTextDescription(stringResource(id = R.string.Icon3))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
@@ -350,7 +334,7 @@ class ImagePage : ComponentActivity() {
 
     @Composable
     fun ImgColorFilter() {
-        TextDescription(stringResource(id = R.string.Icon4))
+        SmallTextDescription(stringResource(id = R.string.Icon4))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
@@ -426,13 +410,3 @@ class ImagePage : ComponentActivity() {
     }
 }
 
-@Composable
-fun TextDescription(text: String) {
-    Text(
-        text = text,
-        color = Color.Gray,
-        fontSize = 10.sp,
-        fontWeight = FontWeight.Light,
-        textAlign = TextAlign.Start,
-    )
-}

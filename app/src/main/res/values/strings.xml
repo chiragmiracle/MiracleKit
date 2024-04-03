@@ -1,9 +1,21 @@
 <resources>
-    <string name="app_name">Miracle Kit</string>
+    <string name="app_name">Miracle Kit : Jetpack Compose</string>
     <string name="StringResourceText">String Resource Text</string>
     <string name="Icon1">1.) Using the imageVector, you can set up System icons.\n2.) Using the Painter, you can set up Drawable icons.\n3.) Using the tint = Color.Red, you can change the color of icon.\n4.) Using the Modifier.alpha(0.5f), you can set up Opacity Down.\n5.) Using the Modifier.rotate(90F), you can set up Rotate icon.\n</string>
     <string name="Icon2">1.) Clip to the circle shape &amp; set border\n2.) Set round corner shape image\n3.) Set gradient color border shape image\n</string>
     <string name="Icon3">1.) Set image inside fit using contentScale = ContentScale.Inside\n2.) Fit.   3.) Crop.   4.) FillBounds.   5.) FillHeight.   6.) FillWidth.   \n</string>
     <string name="Icon4">1.) Green Color Filter\n2.) Black &amp; White Color Filter.\n3.) Color Matrix Filter.\n4.) Color Matrix Filter.\n5.) Blur Image.\n</string>
     <string name="Column1">1.) Column is a layout composable that places its children in a vertical sequence.</string>
+    <string name="Column2">2.) Padding order determines whether it\'s padding or margin for that component. In example below check out paddings.</string>
+    <string name="Column3">3.) Shadow can be applied to Column or Row.</string>
+    <string name="Box">1.) Box aligns children on top of each other like a Stack. The one declared last is on top.</string>
+    <string name="Box1">2.) Elements in Box can be aligned with different alignments.</string>
+    <string name="Box2">3.) Spacer can be used to align elements to end or bottom of screen.</string>
+    <string name="Box3">4.) Weight determines, based on total weight, how much of the parent\'s dimensions should be occupied by each child. \nSpacer is used to create horizontal or vertical space between components.</string>
+    <string name="Row">Row is a layout composable that places its children in a horizontal sequence.</string>
+    <string name="Clickable1">1.) Adding clickable to Modifier makes a component clickable.\nPadding before clickable makes clickable area smaller than component\'s total area.</string>
+    <string name="Surface1">1.) Surface can set content color for Text and Image.</string>
+    <string name="Surface2">2.) Surface can clips it\'s children to selected shape.</string>
+    <string name="Surface3">3.) Surface can set Z index and border of it\'s children.</string>
+    <string name="Surface4">4.) Components can have offset in both x and y axes. Surface inside another surface gets clipped when it overflows from it\'s parent.</string>
 </resources>
