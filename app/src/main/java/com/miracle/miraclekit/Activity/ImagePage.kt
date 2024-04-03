@@ -8,6 +8,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -47,16 +48,16 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.miracle.miraclekit.R
-import com.miracle.miraclekit.ui.theme.ColorAccent
 import com.miracle.miraclekit.ui.theme.Divider_Clr
 import com.miracle.miraclekit.ui.theme.MiracleTheme
+import com.miracle.miraclekit.ui.theme.Theme_Clr
 import com.miracle.miraclekit.ui.theme.White
 
 class ImagePage : ComponentActivity() {
@@ -82,26 +83,27 @@ class ImagePage : ComponentActivity() {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(ColorAccent)
                     .height(55.dp),
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.ic_back),
                     contentDescription = null,
-                    colorFilter = ColorFilter.tint(White),
+                    colorFilter = ColorFilter.tint(Color.Black),
                     modifier = Modifier
                         .height(55.dp)
                         .width(55.dp)
                         .padding(15.dp)
                         .clipToBounds()
-                        .clickable {
+                        .clickable(
+                            indication = null,
+                            interactionSource = remember { MutableInteractionSource() } // This is mandatory
+                        ) {
                             finish()
                         },
                 )
                 Text(
                     text = "Icon & Image",
-                    color = Color.White,
-                    fontFamily = FontFamily.SansSerif,
+                    color = Color.Black,
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
@@ -117,7 +119,6 @@ class ImagePage : ComponentActivity() {
                     .padding(10.dp)
             ) {
 
-
                 titleText("Icon :")
                 IconIMG()
                 SpaceLine()
@@ -130,7 +131,7 @@ class ImagePage : ComponentActivity() {
                 ShapeImageView()
                 SpaceLine()
 
-                titleText("Inside Fit Image :")
+                titleText("Fit Image :")
                 InsideFitImage()
                 SpaceLine()
 
@@ -166,10 +167,12 @@ class ImagePage : ComponentActivity() {
 
     @Composable
     fun IconIMG() {
+        TextDescription(stringResource(id = R.string.Icon1))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
+
             Icon(
                 imageVector = Icons.Default.ArrowBack,
                 contentDescription = "Set Default Icon"
@@ -223,6 +226,7 @@ class ImagePage : ComponentActivity() {
 
     @Composable
     fun ShapeImageView() {
+        TextDescription(stringResource(id = R.string.Icon2))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
@@ -280,6 +284,7 @@ class ImagePage : ComponentActivity() {
 
     @Composable
     fun InsideFitImage() {
+        TextDescription(stringResource(id = R.string.Icon3))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
@@ -345,6 +350,7 @@ class ImagePage : ComponentActivity() {
 
     @Composable
     fun ImgColorFilter() {
+        TextDescription(stringResource(id = R.string.Icon4))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
@@ -418,4 +424,15 @@ class ImagePage : ComponentActivity() {
 
 
     }
+}
+
+@Composable
+fun TextDescription(text: String) {
+    Text(
+        text = text,
+        color = Color.Gray,
+        fontSize = 10.sp,
+        fontWeight = FontWeight.Light,
+        textAlign = TextAlign.Start,
+    )
 }

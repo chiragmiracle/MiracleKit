@@ -8,6 +8,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -25,6 +26,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -51,7 +53,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.miracle.miraclekit.R
-import com.miracle.miraclekit.ui.theme.ColorAccent
 import com.miracle.miraclekit.ui.theme.Divider_Clr
 import com.miracle.miraclekit.ui.theme.MiracleTheme
 import com.miracle.miraclekit.ui.theme.Theme_Clr
@@ -84,25 +85,27 @@ class TextPage : ComponentActivity() {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(ColorAccent)
                     .height(55.dp),
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.ic_back),
                     contentDescription = null,
-                    colorFilter = ColorFilter.tint(White),
+                    colorFilter = ColorFilter.tint(Color.Black),
                     modifier = Modifier
                         .height(55.dp)
                         .width(55.dp)
                         .padding(15.dp)
                         .clipToBounds()
-                        .clickable {
+                        .clickable(
+                            indication = null,
+                            interactionSource = remember { MutableInteractionSource() } // This is mandatory
+                        ) {
                             finish()
                         },
                 )
                 Text(
                     text = "Text",
-                    color = Color.White,
+                    color = Color.Black,
                     fontFamily = FontFamily.SansSerif,
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,

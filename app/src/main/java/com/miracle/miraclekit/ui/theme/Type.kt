@@ -14,11 +14,7 @@ val Typography = Typography(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
-        lineHeight = 24.sp,
+//        lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     )
-)
-
-private val ExotcBold = FontFamily(
-    Font(R.font.exotc_bold),
 )
