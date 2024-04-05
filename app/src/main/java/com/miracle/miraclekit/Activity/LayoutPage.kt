@@ -45,13 +45,13 @@ import com.miracle.miraclekit.R
 import com.miracle.miraclekit.SmallTextDescription
 import com.miracle.miraclekit.SpaceLine
 import com.miracle.miraclekit.TitleText
-import com.miracle.miraclekit.ui.theme.Clr1
-import com.miracle.miraclekit.ui.theme.Clr2
-import com.miracle.miraclekit.ui.theme.Clr3
-import com.miracle.miraclekit.ui.theme.L_Clr1
-import com.miracle.miraclekit.ui.theme.L_Clr2
-import com.miracle.miraclekit.ui.theme.L_Clr3
-import com.miracle.miraclekit.ui.theme.MiracleTheme
+import com.miracle.miraclekit.theme.Clr1
+import com.miracle.miraclekit.theme.Clr2
+import com.miracle.miraclekit.theme.Clr3
+import com.miracle.miraclekit.theme.L_Clr1
+import com.miracle.miraclekit.theme.L_Clr2
+import com.miracle.miraclekit.theme.L_Clr3
+import com.miracle.miraclekit.theme.MiracleTheme
 
 class LayoutPage : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

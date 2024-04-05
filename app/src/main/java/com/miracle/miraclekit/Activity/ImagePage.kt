@@ -58,10 +58,10 @@ import com.miracle.miraclekit.R
 import com.miracle.miraclekit.SmallTextDescription
 import com.miracle.miraclekit.SpaceLine
 import com.miracle.miraclekit.TitleText
-import com.miracle.miraclekit.ui.theme.Divider_Clr
-import com.miracle.miraclekit.ui.theme.MiracleTheme
-import com.miracle.miraclekit.ui.theme.Theme_Clr
-import com.miracle.miraclekit.ui.theme.White
+import com.miracle.miraclekit.theme.Divider_Clr
+import com.miracle.miraclekit.theme.MiracleTheme
+import com.miracle.miraclekit.theme.Theme_Clr
+import com.miracle.miraclekit.theme.White
 
 class ImagePage : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -145,7 +145,6 @@ class ImagePage : ComponentActivity() {
             }
         }
     }
-
 
     @Composable
     fun IconIMG() {

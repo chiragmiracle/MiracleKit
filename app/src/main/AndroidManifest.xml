@@ -24,6 +24,21 @@
         </activity>
 
         <activity
+            android:name=".ListGrid.MainListGridPage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity.TextFieldPage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity.ButtonPage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".Activity.SurfacePage"
             android:exported="false"
             android:screenOrientation="portrait" />

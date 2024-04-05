@@ -53,8 +53,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.miracle.miraclekit.R
 import com.miracle.miraclekit.SpaceLine
-import com.miracle.miraclekit.ui.theme.MiracleTheme
-import com.miracle.miraclekit.ui.theme.Theme_Clr
+import com.miracle.miraclekit.theme.MiracleTheme
+import com.miracle.miraclekit.theme.Theme_Clr
 
 class TextPage : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.miracle.miraclekit.ui.theme
+package com.miracle.miraclekit.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

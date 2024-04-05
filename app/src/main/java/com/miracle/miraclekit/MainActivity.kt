@@ -45,33 +45,36 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.miracle.miraclekit.Activity.ButtonPage
 import com.miracle.miraclekit.Activity.ImagePage
 import com.miracle.miraclekit.Activity.LayoutPage
 import com.miracle.miraclekit.Activity.SurfacePage
+import com.miracle.miraclekit.Activity.TextFieldPage
 import com.miracle.miraclekit.Activity.TextPage
-import com.miracle.miraclekit.ui.theme.Clr1
-import com.miracle.miraclekit.ui.theme.Clr10
-import com.miracle.miraclekit.ui.theme.Clr2
-import com.miracle.miraclekit.ui.theme.Clr3
-import com.miracle.miraclekit.ui.theme.Clr4
-import com.miracle.miraclekit.ui.theme.Clr5
-import com.miracle.miraclekit.ui.theme.Clr6
-import com.miracle.miraclekit.ui.theme.Clr7
-import com.miracle.miraclekit.ui.theme.Clr8
-import com.miracle.miraclekit.ui.theme.Clr9
-import com.miracle.miraclekit.ui.theme.Divider_Clr
-import com.miracle.miraclekit.ui.theme.L_Clr1
-import com.miracle.miraclekit.ui.theme.L_Clr10
-import com.miracle.miraclekit.ui.theme.L_Clr2
-import com.miracle.miraclekit.ui.theme.L_Clr3
-import com.miracle.miraclekit.ui.theme.L_Clr4
-import com.miracle.miraclekit.ui.theme.L_Clr5
-import com.miracle.miraclekit.ui.theme.L_Clr6
-import com.miracle.miraclekit.ui.theme.L_Clr7
-import com.miracle.miraclekit.ui.theme.L_Clr8
-import com.miracle.miraclekit.ui.theme.L_Clr9
-import com.miracle.miraclekit.ui.theme.MiracleTheme
-import com.miracle.miraclekit.ui.theme.White
+import com.miracle.miraclekit.ListGrid.MainListGridPage
+import com.miracle.miraclekit.theme.Clr1
+import com.miracle.miraclekit.theme.Clr10
+import com.miracle.miraclekit.theme.Clr2
+import com.miracle.miraclekit.theme.Clr3
+import com.miracle.miraclekit.theme.Clr4
+import com.miracle.miraclekit.theme.Clr5
+import com.miracle.miraclekit.theme.Clr6
+import com.miracle.miraclekit.theme.Clr7
+import com.miracle.miraclekit.theme.Clr8
+import com.miracle.miraclekit.theme.Clr9
+import com.miracle.miraclekit.theme.Divider_Clr
+import com.miracle.miraclekit.theme.L_Clr1
+import com.miracle.miraclekit.theme.L_Clr10
+import com.miracle.miraclekit.theme.L_Clr2
+import com.miracle.miraclekit.theme.L_Clr3
+import com.miracle.miraclekit.theme.L_Clr4
+import com.miracle.miraclekit.theme.L_Clr5
+import com.miracle.miraclekit.theme.L_Clr6
+import com.miracle.miraclekit.theme.L_Clr7
+import com.miracle.miraclekit.theme.L_Clr8
+import com.miracle.miraclekit.theme.L_Clr9
+import com.miracle.miraclekit.theme.MiracleTheme
+import com.miracle.miraclekit.theme.White
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -191,47 +194,53 @@ class MainActivity : ComponentActivity() {
                         )
                     })
 
-                //----------------- EXTRA -------------------------------------
-
-
-
-                selectedButton(R.drawable.ic_font, "Text", Clr5, L_Clr5,
+                selectedButton(R.drawable.ic_button, "Button", Clr5, L_Clr5,
                     tags = listOf(
-                        "Simple Text",
-                        "String Resource Text",
-                        "Set Color",
-                        "Set Size",
-                        "Font Family",
-                        "Font Style & Weight",
-                        "Custom Text",
-                        "Set Shadow Text",
-                        "Clickable Text",
+                        "Simple Button",
+                        "Disabled Button",
+                        "Button With Icon",
+                        "Set Background",
+                        "Icon Button",
+                        "Custom Icon Button",
+                        "Floating Action Button",
+                        "Chip Button",
+                        "Custom Chip Button",
                     ),
                     onIntent = {
                         startActivity(
                             Intent(
-                                this@MainActivity, TextPage::class.java
+                                this@MainActivity, ButtonPage::class.java
                             )
                         )
                     })
 
-                selectedButton(R.drawable.ic_image, "Image", Clr6, L_Clr6,
+                selectedButton(R.drawable.ic_edit_text, "Text Field", Clr6, L_Clr6,
                     tags = listOf(
-                        "Icon",
-                        "Simple Image",
-                        "Set Shape",
-                        "Set Inside Fit",
-                        "Set Filter"
+                        "Simple TextField",
+                        "Error TextField",
+                        "Background Color Change",
+                        "Text Style Change",
+                        "Set Custom Background Shape",
+                        "Outline TextField",
+                        "Remove Label",
+                        "Single Line, Line Height",
+                        "KeyboardType Phone & Password",
+                        "Icon with TextField",
+                        "IME Icons and Action",
+                        "Mask Chars",
+                        "Credit Card Input",
+                        "Phone Number Input",
+                        "Custom Composable TextField",
                     ),
                     onIntent = {
                         startActivity(
                             Intent(
-                                this@MainActivity, ImagePage::class.java
+                                this@MainActivity, TextFieldPage::class.java
                             )
                         )
                     })
 
-                selectedButton(R.drawable.ic_layout, "Layout", Clr7, L_Clr7,
+                selectedButton(R.drawable.ic_listgrid, "List & Grid", Clr7, L_Clr7,
                     tags = listOf(
                         "Row",
                         "Column",
@@ -245,10 +254,13 @@ class MainActivity : ComponentActivity() {
                     onIntent = {
                         startActivity(
                             Intent(
-                                this@MainActivity, LayoutPage::class.java
+                                this@MainActivity, MainListGridPage::class.java
                             )
                         )
                     })
+
+                //----------------- EXTRA -------------------------------------
+
 
                 selectedButton(R.drawable.ic_layout, "Surface", Clr8, L_Clr8,
                     tags = listOf(
@@ -265,7 +277,6 @@ class MainActivity : ComponentActivity() {
                             )
                         )
                     })
-
                 selectedButton(R.drawable.ic_font, "Text", Clr9, L_Clr9,
                     tags = listOf(
                         "Simple Text",
@@ -285,7 +296,6 @@ class MainActivity : ComponentActivity() {
                             )
                         )
                     })
-
                 selectedButton(R.drawable.ic_image, "Image", Clr10, L_Clr10,
                     tags = listOf(
                         "Icon",
@@ -301,7 +311,6 @@ class MainActivity : ComponentActivity() {
                             )
                         )
                     })
-
             }
         }
     }

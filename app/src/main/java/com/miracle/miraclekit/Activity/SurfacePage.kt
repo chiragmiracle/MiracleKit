@@ -51,15 +51,15 @@ import com.miracle.miraclekit.NormalTextDescription
 import com.miracle.miraclekit.R
 import com.miracle.miraclekit.SpaceLine
 import com.miracle.miraclekit.TitleText
-import com.miracle.miraclekit.ui.theme.Clr1
-import com.miracle.miraclekit.ui.theme.Clr2
-import com.miracle.miraclekit.ui.theme.Clr3
-import com.miracle.miraclekit.ui.theme.Clr4
-import com.miracle.miraclekit.ui.theme.L_Clr1
-import com.miracle.miraclekit.ui.theme.L_Clr2
-import com.miracle.miraclekit.ui.theme.L_Clr3
-import com.miracle.miraclekit.ui.theme.L_Clr4
-import com.miracle.miraclekit.ui.theme.MiracleTheme
+import com.miracle.miraclekit.theme.Clr1
+import com.miracle.miraclekit.theme.Clr2
+import com.miracle.miraclekit.theme.Clr3
+import com.miracle.miraclekit.theme.Clr4
+import com.miracle.miraclekit.theme.L_Clr1
+import com.miracle.miraclekit.theme.L_Clr2
+import com.miracle.miraclekit.theme.L_Clr3
+import com.miracle.miraclekit.theme.L_Clr4
+import com.miracle.miraclekit.theme.MiracleTheme
 
 class SurfacePage : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -154,6 +154,7 @@ class SurfacePage : ComponentActivity() {
         }
     }
 
+    @Preview(showBackground = true)
     @Composable
     fun ClickableDemo() {
         val context = LocalContext.current
@@ -202,6 +203,7 @@ class SurfacePage : ComponentActivity() {
         }
     }
 
+    @Preview(showBackground = true)
     @Composable
     fun SurfaceContentColorDemo() {
         Surface(
@@ -218,6 +220,7 @@ class SurfacePage : ComponentActivity() {
         }
     }
 
+    @Preview(showBackground = true)
     @Composable
     fun SurfaceShapeDemo() {
         Row {
@@ -257,6 +260,7 @@ class SurfacePage : ComponentActivity() {
         }
     }
 
+    @Preview(showBackground = true)
     @Composable
     fun SurfaceIndexDemo() {
         Row {
@@ -305,6 +309,7 @@ class SurfacePage : ComponentActivity() {
         }
     }
 
+    @Preview(showBackground = true)
     @Composable
     fun SurfaceClickPropagationDemo() {
         // Provides a Context that can be used by Android applications

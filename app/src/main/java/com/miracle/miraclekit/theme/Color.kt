@@ -1,19 +1,16 @@
-package com.miracle.miraclekit.ui.theme
+package com.miracle.miraclekit.theme
 
 import androidx.compose.ui.graphics.Color
 
-val ColorAccent = Color(0xFFFC9B01)
-val ColorPrimary = Color(0xFF078379)
+val ColorAccent = Color(0xFF977EFE)
+val ColorPrimary = Color(0xFF977EFE)
 val ColorPrimaryDark = Color(0xFFFFFFFFF)
-val Theme_Clr = Color(0xFF078379)
-val Theme_Clr1 = Color(0xFFFC9B01)
-val Light_Clr = Color(0xFF199491)
+val Theme_Clr = Color(0xFF977EFE)
 val BgColor = Color(0xFFFFFFFF)
 val Divider_Clr = Color(0xFFC9C9C9)
 
 val White = Color(0xFFFFFFFF)
 val Black = Color(0xFF000000)
-
 
 val Clr1 = Color(0xFFB877D5)
 val L_Clr1 = Color(0xFFFCF5FF)

@@ -1,4 +1,4 @@
-package com.miracle.miraclekit.ui.theme
+package com.miracle.miraclekit.theme
 
 import android.app.Activity
 import android.os.Build
