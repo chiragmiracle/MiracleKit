@@ -142,7 +142,7 @@ class TextPage : ComponentActivity() {
                 SpaceLine()
                 setTextWithLine()
                 SpaceLine()
-                setSingleLineText()
+                ClickText()
             }
         }
     }
@@ -335,7 +335,7 @@ class TextPage : ComponentActivity() {
     }
 
     @Composable
-    fun setSingleLineText() {
+    fun ClickText() {
         val context = LocalContext.current
         Text(
             text = "Clickable Text",

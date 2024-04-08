@@ -67,4 +67,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation(libs.androidx.material)
+    // Coil
+    implementation(libs.coil.compose)
 }

@@ -1,6 +1,7 @@
 # MiracleKit
 
 ## Text :
+
 * Simple Text.
 * String Resource Text.
 * Set Color.
@@ -12,6 +13,7 @@
 * Clickable Text.
 
 ## Image :
+
 * Icon.
 * Simple Image.
 * Set Shape.
@@ -19,6 +21,7 @@
 * Set Filter.
 
 ## Layout :
+
 * Row.
 * Column.
 * Box.
@@ -29,6 +32,7 @@
 * Spacer.
 
 ## Surface :
+
 * Clickable.
 * Surface.
 * Set Custom Shape.
@@ -36,6 +40,7 @@
 * Set Off
 
 ## Button :
+
 * Simple Button.
 * Disabled Button.
 * Button With Icon.
@@ -47,6 +52,7 @@
 * Custom Chip Button.
 
 ## Text Field :
+
 * Simple TextField.
 * Error TextField.
 * Background Color Change.
@@ -62,3 +68,21 @@
 * Credit Card Input.
 * Phone Number Input.
 * Custom Composable TextField.
+
+## List & Grid :
+
+* Lazy Column (2 Demo)
+* Lazy Row (3 Demo)
+* Lazy Vertical Grid
+* Dynamic Lazy Vertical Grid
+* Vertical Staggered Grid
+* Vertical List Items
+
+## AppBar with :
+
+* Simple AppBar
+* AppBar with overflow menu (2 Demo)
+* Tab Row (Text)
+* Tab Row (Text + Icons)
+* Scroll Tabs
+* Custom Tabs

@@ -1,5 +1,6 @@
 package com.miracle.miraclekit.ListGrid
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -8,6 +9,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -32,6 +34,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.miracle.miraclekit.R
+import com.miracle.miraclekit.selectedButton
+import com.miracle.miraclekit.theme.Clr1
+import com.miracle.miraclekit.theme.Clr2
+import com.miracle.miraclekit.theme.Clr3
+import com.miracle.miraclekit.theme.Clr4
+import com.miracle.miraclekit.theme.Clr5
+import com.miracle.miraclekit.theme.Clr6
+import com.miracle.miraclekit.theme.Clr7
+import com.miracle.miraclekit.theme.L_Clr1
+import com.miracle.miraclekit.theme.L_Clr2
+import com.miracle.miraclekit.theme.L_Clr3
+import com.miracle.miraclekit.theme.L_Clr4
+import com.miracle.miraclekit.theme.L_Clr5
+import com.miracle.miraclekit.theme.L_Clr6
+import com.miracle.miraclekit.theme.L_Clr7
 import com.miracle.miraclekit.theme.MiracleTheme
 
 class MainListGridPage : ComponentActivity() {
@@ -94,9 +111,131 @@ class MainListGridPage : ComponentActivity() {
                     .verticalScroll(rememberScrollState())
                     .fillMaxWidth()
                     .fillMaxHeight()
-                    .padding(10.dp)
             ) {
 
+                Spacer(modifier = Modifier.height(10.dp))
+
+                selectedButton(R.drawable.ic_listgrid, "Lazy Column 1", Clr1, L_Clr1,
+                    tags = listOf(
+                        "Lazy Column",
+                        "Compose",
+                        "Vertical Arrangement",
+                        "Contact Padding",
+                        "Model Class",
+                        "Custom Card Item",
+                        "Favourite",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@MainListGridPage, LazyColumnPage1::class.java
+                            )
+                        )
+                    })
+
+                selectedButton(R.drawable.ic_listgrid, "Lazy Column 2", Clr2, L_Clr2,
+                    tags = listOf(
+                        "Custom Lazy Column",
+                        "Compose",
+                        "Vertical Arrangement",
+                        "Contact Padding",
+                        "Custom Lazy Scroll",
+                        "Add Item",
+                        "Remove Item",
+                        "Swipe to Top",
+                        "Swipe to Bottom",
+                        "Model Class",
+                        "Custom Card Item",
+                        "Favourite",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@MainListGridPage, LazyColumnPage2::class.java
+                            )
+                        )
+                    })
+
+                selectedButton(R.drawable.ic_listgrid, "Lazy Row", Clr3, L_Clr3,
+                    tags = listOf(
+                        "Lazy Row",
+                        "Compose",
+                        "Vertical Arrangement",
+                        "Contact Padding",
+                        "Model Class",
+                        "Custom Card Item",
+                        "Favourite",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@MainListGridPage, LazyRowPage::class.java
+                            )
+                        )
+                    })
+
+                selectedButton(R.drawable.ic_listgrid, "Lazy Vertical Grid", Clr4, L_Clr4,
+                    tags = listOf(
+                        "Lazy Vertical Grid",
+                        "Compose",
+                        "Grid Cell",
+                        "Vertical Arrangement",
+                        "Contact Padding",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@MainListGridPage, LazyVerticalGridPage::class.java
+                            )
+                        )
+                    })
+
+                selectedButton(R.drawable.ic_listgrid, "Dynamic Lazy Vertical Grid", Clr5, L_Clr5,
+                    tags = listOf(
+                        "Lazy Vertical Grid",
+                        "Compose",
+                        "Grid Cell",
+                        "Vertical Arrangement",
+                        "Contact Padding",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@MainListGridPage, DynamicLazyVerticalGridPage::class.java
+                            )
+                        )
+                    })
+
+                selectedButton(R.drawable.ic_listgrid, "Lazy Vertical Staggered Grid", Clr6, L_Clr6,
+                    tags = listOf(
+                        "Staggered Grid",
+                        "Lazy Vertical Grid",
+                        "Compose",
+                        "Grid Cell",
+                        "Vertical Arrangement",
+                        "Contact Padding",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@MainListGridPage, LazyVerticalStaggeredGridPage::class.java
+                            )
+                        )
+                    })
+
+                selectedButton(R.drawable.ic_listgrid, "Vertical List Items", Clr7, L_Clr7,
+                    tags = listOf(
+                        "Lazy Column",
+                        "Compose",
+                        "List Items",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@MainListGridPage, VerticalListItemsPage::class.java
+                            )
+                        )
+                    })
             }
         }
     }
