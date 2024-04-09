@@ -28,7 +28,7 @@ val Clr5 = Color(0xFF60CBFF)
 val L_Clr5 = Color(0xFFF0FAFF)
 
 val Clr6 = Color(0xFF49D7BD)
-val L_Clr6 = Color(0xFFF5FFFD)
+val L_Clr6 = Color(0xFFF2F8F7)
 
 val Clr7 = Color(0xFFA1B5C0)
 val L_Clr7 = Color(0xFFEFFAFF)

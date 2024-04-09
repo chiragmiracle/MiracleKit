@@ -26,6 +26,31 @@
         </activity>
 
         <activity
+            android:name=".Selector.SnackBarPage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Selector.SelectorPage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity.BottomNavigationPage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity.BottomAppBarPage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity.BottomAppBarNavPage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".Activity.AppBarTabPage"
             android:exported="false"
             android:screenOrientation="portrait" />

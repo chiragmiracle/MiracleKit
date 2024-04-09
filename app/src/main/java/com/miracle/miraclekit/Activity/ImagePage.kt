@@ -54,6 +54,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.miracle.miraclekit.AppBarTitleText
 import com.miracle.miraclekit.R
 import com.miracle.miraclekit.SmallTextDescription
 import com.miracle.miraclekit.SpaceLine
@@ -104,14 +105,9 @@ class ImagePage : ComponentActivity() {
                             finish()
                         },
                 )
-                Text(
-                    text = "Icon & Image",
-                    color = Color.Black,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.align(alignment = Alignment.Center)
-                )
+
+                val Mpadding = Modifier.align(Alignment.CenterStart)
+                AppBarTitleText(Mpadding, text = "Icon & Image")
             }
 
             Column(

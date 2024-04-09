@@ -50,7 +50,6 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -61,10 +60,9 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.TransformedText
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.miracle.miraclekit.AppBarTitleText
 import com.miracle.miraclekit.NormalTextDescription
 import com.miracle.miraclekit.R
 import com.miracle.miraclekit.SmallTextDescription
@@ -120,15 +118,9 @@ class TextFieldPage : ComponentActivity() {
                             finish()
                         },
                 )
-                Text(
-                    text = "Text Field",
-                    color = Color.Black,
-                    fontFamily = FontFamily.SansSerif,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.align(alignment = Alignment.Center)
-                )
+
+                val Mpadding = Modifier.align(Alignment.CenterStart)
+                AppBarTitleText(Mpadding, text = "Text Field")
             }
 
             Column(

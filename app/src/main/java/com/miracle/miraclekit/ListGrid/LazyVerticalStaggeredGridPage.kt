@@ -38,6 +38,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.miracle.miraclekit.AppBarTitleText
 import com.miracle.miraclekit.R
 import com.miracle.miraclekit.theme.MiracleTheme
 import kotlin.random.Random
@@ -86,15 +87,9 @@ class LazyVerticalStaggeredGridPage : ComponentActivity() {
                             finish()
                         },
                 )
-                Text(
-                    text = "Lazy Vertical Staggered Grid",
-                    color = Color.Black,
-                    fontFamily = FontFamily.SansSerif,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.align(alignment = Alignment.Center)
-                )
+
+                val Mpadding = Modifier.align(Alignment.CenterStart)
+                AppBarTitleText(Mpadding, text = "Lazy Vertical Staggered Grid")
             }
 
             val items = (1..100).map {

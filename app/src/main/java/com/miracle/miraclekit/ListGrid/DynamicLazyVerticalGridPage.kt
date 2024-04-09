@@ -46,6 +46,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
+import com.miracle.miraclekit.AppBarTitleText
 import com.miracle.miraclekit.Model.Place
 import com.miracle.miraclekit.Model.places
 import com.miracle.miraclekit.R
@@ -96,15 +97,8 @@ class DynamicLazyVerticalGridPage : ComponentActivity() {
                             finish()
                         },
                 )
-                Text(
-                    text = "Dynamic Lazy Vertical Grid",
-                    color = Color.Black,
-                    fontFamily = FontFamily.SansSerif,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.align(alignment = Alignment.Center)
-                )
+                val Mpadding = Modifier.align(Alignment.CenterStart)
+                AppBarTitleText(Mpadding, text = "Dynamic Lazy Vertical Grid")
             }
 
             LazyVerticalGrid(

@@ -70,6 +70,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.miracle.miraclekit.AppBarTitleText
 import com.miracle.miraclekit.Model.ActionItemMode
 import com.miracle.miraclekit.Model.ActionItemSpec
 import com.miracle.miraclekit.Model.separateIntoActionAndOverflow
@@ -94,7 +95,7 @@ class AppBarTabPage : ComponentActivity() {
                         .fillMaxWidth()
                         .fillMaxHeight(),
                 ) {
-                    MainListGridPageUI()
+                    AppBarTabPageUI()
                 }
             }
         }
@@ -102,7 +103,7 @@ class AppBarTabPage : ComponentActivity() {
 
     @Preview(showBackground = true)
     @Composable
-    fun MainListGridPageUI() {
+    fun AppBarTabPageUI() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -128,15 +129,9 @@ class AppBarTabPage : ComponentActivity() {
                             finish()
                         },
                 )
-                Text(
-                    text = "Top AppBar & Tabs",
-                    color = Color.Black,
-                    fontFamily = FontFamily.SansSerif,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.align(alignment = Alignment.Center)
-                )
+
+                val Mpadding = Modifier.align(Alignment.CenterStart)
+                AppBarTitleText(Mpadding, text = "Top AppBar & Tabs")
             }
 
             Column(

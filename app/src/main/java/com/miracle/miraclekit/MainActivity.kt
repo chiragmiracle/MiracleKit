@@ -39,6 +39,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
@@ -48,10 +49,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.miracle.miraclekit.Activity.AppBarTabPage
+import com.miracle.miraclekit.Activity.BottomAppBarNavPage
 import com.miracle.miraclekit.Activity.ButtonPage
 import com.miracle.miraclekit.Activity.ImagePage
 import com.miracle.miraclekit.Activity.LayoutPage
@@ -59,6 +62,7 @@ import com.miracle.miraclekit.Activity.SurfacePage
 import com.miracle.miraclekit.Activity.TextFieldPage
 import com.miracle.miraclekit.Activity.TextPage
 import com.miracle.miraclekit.ListGrid.MainListGridPage
+import com.miracle.miraclekit.Selector.SelectorPage
 import com.miracle.miraclekit.theme.Clr1
 import com.miracle.miraclekit.theme.Clr10
 import com.miracle.miraclekit.theme.Clr2
@@ -252,7 +256,26 @@ class MainActivity : ComponentActivity() {
                                     )
                                 })
 
-                            selectedButton(R.drawable.ic_listgrid, "List & Grid", Clr7, L_Clr7,
+                            selectedButton(R.drawable.ic_button, "Selector", Clr7, L_Clr7,
+                                tags = listOf(
+                                    "Row",
+                                    "Column",
+                                    "Box",
+                                    "Modifier",
+                                    "Arrangement",
+                                    "Padding",
+                                    "Weight",
+                                    "Spacer",
+                                ),
+                                onIntent = {
+                                    startActivity(
+                                        Intent(
+                                            this@MainActivity, SelectorPage::class.java
+                                        )
+                                    )
+                                })
+
+                            selectedButton(R.drawable.ic_listgrid, "List & Grid", Clr8, L_Clr8,
                                 tags = listOf(
                                     "Row",
                                     "Column",
@@ -271,7 +294,7 @@ class MainActivity : ComponentActivity() {
                                     )
                                 })
 
-                            selectedButton(R.drawable.ic_appbar, "Top AppBar & Tabs", Clr8, L_Clr8,
+                            selectedButton(R.drawable.ic_appbar, "Top AppBar & Tabs", Clr9, L_Clr9,
                                 tags = listOf(
                                     "Compose",
                                     "Top AppBar",
@@ -291,42 +314,21 @@ class MainActivity : ComponentActivity() {
 
                             selectedButton(R.drawable.ic_layout,
                                 "Bottom AppBar & Navigation",
-                                Clr9,
-                                L_Clr9,
+                                Clr10,
+                                L_Clr10,
                                 tags = listOf(
-                                    "Simple Text",
-                                    "String Resource Text",
-                                    "Set Color",
-                                    "Set Size",
-                                    "Font Family",
-                                    "Font Style & Weight",
-                                    "Custom Text",
-                                    "Set Shadow Text",
-                                    "Clickable Text",
+                                    "Bottom AppBar",
+                                    "Bottom Navigation",
+                                    "Bottom Navigation Items",
                                 ),
                                 onIntent = {
                                     startActivity(
                                         Intent(
-                                            this@MainActivity, TextPage::class.java
+                                            this@MainActivity, BottomAppBarNavPage::class.java
                                         )
                                     )
                                 })
 
-                            selectedButton(R.drawable.ic_image, "Image", Clr10, L_Clr10,
-                                tags = listOf(
-                                    "Icon",
-                                    "Simple Image",
-                                    "Set Shape",
-                                    "Set Inside Fit",
-                                    "Set Filter"
-                                ),
-                                onIntent = {
-                                    startActivity(
-                                        Intent(
-                                            this@MainActivity, ImagePage::class.java
-                                        )
-                                    )
-                                })
 
                         }
                     }
@@ -422,6 +424,8 @@ fun selectedButton(
                     fontFamily = FontFamily.SansSerif,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Start,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                     modifier = Modifier
                         .weight(1f)
                 )
@@ -446,7 +450,6 @@ fun selectedButton(
                             .rotate(180F)
                     )
                 }
-
             }
 
             Spacer(modifier = Modifier.height(5.dp))
@@ -459,7 +462,6 @@ fun selectedButton(
                     }
                 })
         }
-
     }
 }
 
@@ -497,6 +499,21 @@ fun TutorialChip(text: String, color: Color) {
             )
         }
     }
+}
+
+@Composable
+fun AppBarTitleText(modifier: Modifier, text: String) {
+    Text(
+        text = text,
+        color = Color.Black,
+        fontFamily = FontFamily.SansSerif,
+        fontSize = 20.sp,
+        fontWeight = FontWeight.Bold,
+        textAlign = TextAlign.Center,
+        maxLines = 1,
+        modifier = modifier
+            .padding(start = 60.dp, end = 10.dp)
+    )
 }
 
 @Composable
