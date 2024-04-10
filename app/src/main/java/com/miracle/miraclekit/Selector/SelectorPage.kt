@@ -27,15 +27,21 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.miracle.miraclekit.Activity.ImagePage
-import com.miracle.miraclekit.Activity.TextPage
 import com.miracle.miraclekit.AppBarTitleText
 import com.miracle.miraclekit.R
 import com.miracle.miraclekit.selectedButton
 import com.miracle.miraclekit.theme.Clr1
 import com.miracle.miraclekit.theme.Clr2
+import com.miracle.miraclekit.theme.Clr3
+import com.miracle.miraclekit.theme.Clr4
+import com.miracle.miraclekit.theme.Clr5
+import com.miracle.miraclekit.theme.Clr6
 import com.miracle.miraclekit.theme.L_Clr1
 import com.miracle.miraclekit.theme.L_Clr2
+import com.miracle.miraclekit.theme.L_Clr3
+import com.miracle.miraclekit.theme.L_Clr4
+import com.miracle.miraclekit.theme.L_Clr5
+import com.miracle.miraclekit.theme.L_Clr6
 import com.miracle.miraclekit.theme.MiracleTheme
 
 class SelectorPage : ComponentActivity() {
@@ -43,12 +49,8 @@ class SelectorPage : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MiracleTheme {
-                Surface(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .fillMaxHeight(),
-                ) {
-                    AppBarTabPageUI()
+                Surface {
+                    SelectorPageUI()
                 }
             }
         }
@@ -56,7 +58,7 @@ class SelectorPage : ComponentActivity() {
 
     @Preview(showBackground = true)
     @Composable
-    fun AppBarTabPageUI() {
+    fun SelectorPageUI() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -92,20 +94,15 @@ class SelectorPage : ComponentActivity() {
                     .verticalScroll(rememberScrollState())
                     .fillMaxWidth()
                     .fillMaxHeight()
-                    .padding(10.dp)
             ) {
 
                 selectedButton(R.drawable.ic_button, "SnackBar", Clr1, L_Clr1,
                     tags = listOf(
-                        "Simple Text",
-                        "String Resource Text",
-                        "Set Color",
-                        "Set Size",
-                        "Font Family",
-                        "Font Style & Weight",
-                        "Custom Text",
-                        "Set Shadow Text",
-                        "Clickable Text",
+                        "Simple SnackBar",
+                        "Action SnackBar",
+                        "Action Button New Line",
+                        "SnackBar Style",
+                        "Custom SnackBar",
                     ),
                     onIntent = {
                         startActivity(
@@ -115,18 +112,88 @@ class SelectorPage : ComponentActivity() {
                         )
                     })
 
-                selectedButton(R.drawable.ic_button, "Image", Clr2, L_Clr2,
+                selectedButton(R.drawable.ic_button, "Progress Indicator", Clr2, L_Clr2,
                     tags = listOf(
-                        "Icon",
-                        "Simple Image",
-                        "Set Shape",
-                        "Set Inside Fit",
-                        "Set Filter"
+                        "Simple Linear Progress",
+                        "Custom Linear Progress",
+                        "Simple Circular Progress",
+                        "Animated Circular Progress",
+                        "Custom Circular Progress",
+                        "Animated Linear Progress",
+                        "Steps ProgressBar",
+                        "Animated ProgressBar",
                     ),
                     onIntent = {
                         startActivity(
                             Intent(
-                                this@SelectorPage, ImagePage::class.java
+                                this@SelectorPage, ProgressIndicatorPage::class.java
+                            )
+                        )
+                    })
+
+                selectedButton(R.drawable.ic_button, "Check Box", Clr3, L_Clr3,
+                    tags = listOf(
+                        "Simple CheckBox",
+                        "Text + CheckBox",
+                        "Text + CheckBox + Ripple",
+                        "Square CheckBox",
+                        "Round CheckBox",
+                        "Custom Animated CheckBox",
+                        "Multi Selected CheckBox",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@SelectorPage, CheckBoxPage::class.java
+                            )
+                        )
+                    })
+
+                selectedButton(R.drawable.ic_button, "Radio Button", Clr4, L_Clr4,
+                    tags = listOf(
+                        "Simple RadioButton",
+                        "Change Color Style",
+                        "Selectable Group RadioButton",
+                        "Drawable Shape RadioButton",
+                        "Custom RadioButton",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@SelectorPage, RadioButtonsPage::class.java
+                            )
+                        )
+                    })
+
+                selectedButton(R.drawable.ic_button, "Switch", Clr5, L_Clr5,
+                    tags = listOf(
+                        "Simple Switch",
+                        "Icon Switch",
+                        "Change Color Switch",
+                        "Custom Switch (Day - night)",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@SelectorPage, SwitchPage::class.java
+                            )
+                        )
+                    })
+
+                selectedButton(R.drawable.ic_button, "Toggle Buttons", Clr6, L_Clr6,
+                    tags = listOf(
+                        "Filled Icon ToggleButton",
+                        "Filled Tonal Button",
+                        "Filled Tonal Icon Button",
+                        "Filled Tonal Icon Toggle Button",
+                        "Custom Toggle Button",
+                        "Multi Toggle Button",
+                        "Like & DisLike Toggle Button",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@SelectorPage, ToggleButtonsPage::class.java
                             )
                         )
                     })

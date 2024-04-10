@@ -39,7 +39,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
@@ -62,6 +61,7 @@ import com.miracle.miraclekit.Activity.SurfacePage
 import com.miracle.miraclekit.Activity.TextFieldPage
 import com.miracle.miraclekit.Activity.TextPage
 import com.miracle.miraclekit.ListGrid.MainListGridPage
+import com.miracle.miraclekit.NavDrawer.NavDrawerPage
 import com.miracle.miraclekit.Selector.SelectorPage
 import com.miracle.miraclekit.theme.Clr1
 import com.miracle.miraclekit.theme.Clr10
@@ -258,14 +258,13 @@ class MainActivity : ComponentActivity() {
 
                             selectedButton(R.drawable.ic_button, "Selector", Clr7, L_Clr7,
                                 tags = listOf(
-                                    "Row",
-                                    "Column",
-                                    "Box",
-                                    "Modifier",
-                                    "Arrangement",
-                                    "Padding",
-                                    "Weight",
-                                    "Spacer",
+                                    "SnackBar",
+                                    "ProgressBar",
+                                    "CheckBox",
+                                    "Switch",
+                                    "Radio Button",
+                                    "Slider",
+                                    "Range Slider",
                                 ),
                                 onIntent = {
                                     startActivity(
@@ -329,7 +328,65 @@ class MainActivity : ComponentActivity() {
                                     )
                                 })
 
+                            selectedButton(R.drawable.ic_navdrawer,
+                                "Navigation Drawer",
+                                Clr1,
+                                L_Clr1,
+                                tags = listOf(
+                                    "Simple Text",
+                                    "String Resource Text",
+                                    "Set Color",
+                                    "Set Size",
+                                    "Font Family",
+                                    "Font Style & Weight",
+                                    "Custom Text",
+                                    "Set Shadow Text",
+                                    "Clickable Text",
+                                ),
+                                onIntent = {
+                                    startActivity(
+                                        Intent(
+                                            this@MainActivity, NavDrawerPage::class.java
+                                        )
+                                    )
+                                })
 
+//  -------------------------- EXTRA------------------------------
+
+                            selectedButton(R.drawable.ic_image, "Image", Clr2, L_Clr2,
+                                tags = listOf(
+                                    "Icon",
+                                    "Simple Image",
+                                    "Set Shape",
+                                    "Set Inside Fit",
+                                    "Set Filter"
+                                ),
+                                onIntent = {
+                                    startActivity(
+                                        Intent(
+                                            this@MainActivity, ImagePage::class.java
+                                        )
+                                    )
+                                })
+
+                            selectedButton(R.drawable.ic_layout, "Layout", Clr3, L_Clr3,
+                                tags = listOf(
+                                    "Row",
+                                    "Column",
+                                    "Box",
+                                    "Modifier",
+                                    "Arrangement",
+                                    "Padding",
+                                    "Weight",
+                                    "Spacer",
+                                ),
+                                onIntent = {
+                                    startActivity(
+                                        Intent(
+                                            this@MainActivity, LayoutPage::class.java
+                                        )
+                                    )
+                                })
                         }
                     }
                 )

@@ -69,6 +69,60 @@
 * Phone Number Input.
 * Custom Composable TextField.
 
+## SnackBar :
+
+* Simple SnackBar
+* Action SnackBar
+* Action Button New Line
+* SnackBar Style
+* Custom SnackBar
+
+## Progress Indicator :
+
+* Simple Linear Progress
+* Custom Linear Progress
+* Simple Circular Progress
+* Animated Circular Progress
+* Custom Circular Progress
+* Animated Linear Progress
+* Steps ProgressBar
+* Animated ProgressBar
+
+## Check Box :
+
+* Simple CheckBox
+* Text + CheckBox
+* Text + CheckBox + Ripple
+* Square CheckBox
+* Round CheckBox
+* Custom Animated CheckBox
+* Multi Selected CheckBox
+
+## Radio Button :
+
+* Simple RadioButton
+* Change Color Style
+* Selectable Group RadioButton
+* Drawable Shape RadioButton
+* Custom RadioButton
+
+## Switch :
+
+* Simple Switch
+* Icon Switch
+* Change Color Switch
+* Custom Switch (Day - night)
+
+## Toggle Buttons :
+
+* Filled Icon ToggleButton
+* Filled Tonal Button
+* Filled Tonal Icon Button
+* Filled Tonal Icon Toggle Button
+* Custom Toggle Button
+* Multi Toggle Button
+* Like & DisLike Toggle Button
+
 ## List & Grid :
 
 * Lazy Column (2 Demo)
