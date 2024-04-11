@@ -27,6 +27,26 @@
         </activity>
 
         <activity
+            android:name=".NavDrawer.ModelBottomSheetPage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".NavDrawer.BottomSheetPage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".NavDrawer.ModelNavDrawerPage2"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".NavDrawer.ModelNavDrawerPage1"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".NavDrawer.ModelNavDrawerPage"
             android:exported="false"
             android:screenOrientation="portrait" />
@@ -77,22 +97,22 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".Activity.BottomNavigationPage"
+            android:name=".BottomAppBarNav.BottomNavigationPage"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".Activity.BottomAppBarPage"
+            android:name=".BottomAppBarNav.BottomAppBarPage"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".Activity.BottomAppBarNavPage"
+            android:name=".BottomAppBarNav.BottomAppBarNavPage"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".Activity.AppBarTabPage"
+            android:name=".BottomAppBarNav.AppBarTabPage"
             android:exported="false"
             android:screenOrientation="portrait" />
 

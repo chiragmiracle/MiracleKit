@@ -1,4 +1,4 @@
-package com.miracle.miraclekit.Activity
+package com.miracle.miraclekit.BottomAppBarNav
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

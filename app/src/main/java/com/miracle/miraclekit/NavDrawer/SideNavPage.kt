@@ -240,7 +240,7 @@ private fun DrawerHeader() {
 
             Spacer(modifier = Modifier.height(4.dp))
             Text(text = "Smart Tool Factory", color = Color.White)
-            Text(text = "smarttoolfactory@icloud.com", color = Color.White)
+            Text(text = "themiracleitsolutions@gmail.com", color = Color.White)
         }
     }
 }

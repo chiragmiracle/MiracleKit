@@ -32,8 +32,16 @@ import com.miracle.miraclekit.R
 import com.miracle.miraclekit.selectedButton
 import com.miracle.miraclekit.theme.Clr1
 import com.miracle.miraclekit.theme.Clr2
+import com.miracle.miraclekit.theme.Clr3
+import com.miracle.miraclekit.theme.Clr4
+import com.miracle.miraclekit.theme.Clr5
+import com.miracle.miraclekit.theme.Clr6
 import com.miracle.miraclekit.theme.L_Clr1
 import com.miracle.miraclekit.theme.L_Clr2
+import com.miracle.miraclekit.theme.L_Clr3
+import com.miracle.miraclekit.theme.L_Clr4
+import com.miracle.miraclekit.theme.L_Clr5
+import com.miracle.miraclekit.theme.L_Clr6
 import com.miracle.miraclekit.theme.MiracleTheme
 
 class NavDrawerPage : ComponentActivity() {
@@ -104,15 +112,17 @@ class NavDrawerPage : ComponentActivity() {
                                 this@NavDrawerPage, SideNavPage::class.java
                             )
                         )
-                    })
+                    }
+                )
 
                 selectedButton(
                     R.drawable.ic_navdrawer, "Model Navigation Drawer", Clr2, L_Clr2,
                     tags = listOf(
-                        "Simple SnackBar",
-                        "Action SnackBar",
-                        "Action Button New Line",
-                        "SnackBar Style",
+                        "Modal Drawer",
+                        "Top AppBar",
+                        "Composition Local Provider",
+                        "Lazy Column",
+                        "List Item",
                         "Custom SnackBar",
                     ),
                     onIntent = {
@@ -121,7 +131,91 @@ class NavDrawerPage : ComponentActivity() {
                                 this@NavDrawerPage, ModelNavDrawerPage::class.java
                             )
                         )
-                    })
+                    }
+                )
+
+                selectedButton(
+                    R.drawable.ic_navdrawer, "Model Navigation Drawer 1", Clr3, L_Clr3,
+                    tags = listOf(
+                        "Modal Drawer",
+                        "Top AppBar",
+                        "Composition Local Provider",
+                        "Lazy Column",
+                        "List Item",
+                        "Custom SnackBar",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@NavDrawerPage, ModelNavDrawerPage1::class.java
+                            )
+                        )
+                    }
+                )
+
+                selectedButton(
+                    R.drawable.ic_navdrawer, "Model Navigation Drawer 2", Clr4, L_Clr4,
+                    tags = listOf(
+                        "Modal Drawer",
+                        "Scaffold",
+                        "Drawer Elevation",
+                        "Drawer Shape",
+                        "Top AppBar",
+                        "Composition Local Provider",
+                        "Lazy Column",
+                        "List Item",
+                        "Custom SnackBar",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@NavDrawerPage, ModelNavDrawerPage2::class.java
+                            )
+                        )
+                    }
+                )
+
+                selectedButton(
+                    R.drawable.ic_navdrawer, "Bottom Sheet", Clr5, L_Clr5,
+                    tags = listOf(
+                        "Bottom Sheet",
+                        "isExpanded",
+                        "isCollapsed",
+                        "Offset",
+                        "Progress",
+                        "Floating Action Button",
+                        "Lazy Column",
+                        "List Item",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@NavDrawerPage, BottomSheetPage::class.java
+                            )
+                        )
+                    }
+                )
+
+                selectedButton(
+                    R.drawable.ic_navdrawer, "Bottom Sheet", Clr6, L_Clr6,
+                    tags = listOf(
+                        "Bottom Sheet",
+                        "isExpanded",
+                        "isCollapsed",
+                        "Offset",
+                        "Progress",
+                        "Floating Action Button",
+                        "Lazy Column",
+                        "List Item",
+                    ),
+                    onIntent = {
+                        startActivity(
+                            Intent(
+                                this@NavDrawerPage, ModelBottomSheetPage::class.java
+                            )
+                        )
+                    }
+                )
 
             }
         }

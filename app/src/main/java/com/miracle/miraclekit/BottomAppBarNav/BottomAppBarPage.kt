@@ -1,4 +1,4 @@
-package com.miracle.miraclekit.Activity
+package com.miracle.miraclekit.BottomAppBarNav
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -69,7 +69,6 @@ class BottomAppBarPage : ComponentActivity() {
         }
     }
 
-
     @Preview(showBackground = true)
     @Composable
     fun BottomAppBarPageUI() {
@@ -98,44 +97,7 @@ class BottomAppBarPage : ComponentActivity() {
                 BottomAppBarComponent()
             }
         ) {
-            MainContent(it.calculateBottomPadding())
-        }
-    }
-
-    @OptIn(ExperimentalMaterialApi::class)
-    @Composable
-    fun MainContent(calculateBottomPadding: Dp) {
-        LazyColumn(
-            modifier = Modifier.background(BgColor),
-            contentPadding = PaddingValues(
-                top = 10.dp,
-                start = 10.dp,
-                end = 10.dp,
-                bottom = calculateBottomPadding + 10.dp
-            ),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            items(userList) { item: String ->
-                Card(shape = RoundedCornerShape(10.dp), elevation = 2.dp) {
-                    ListItem(
-                        modifier = Modifier.clickable {},
-                        icon = {
-                            Image(
-                                modifier = Modifier
-                                    .size(40.dp)
-                                    .clip(CircleShape),
-                                painter = painterResource(id = R.drawable.avtar),
-                                contentDescription = null
-                            )
-                        },
-                        secondaryText = {
-                            Text(text = "Secondary text", color = Color.LightGray)
-                        }
-                    ) {
-                        Text(text = item, fontSize = 16.sp, fontWeight = FontWeight.Bold)
-                    }
-                }
-            }
+            UserListContent(it.calculateBottomPadding())
         }
     }
 
@@ -182,8 +144,43 @@ class BottomAppBarPage : ComponentActivity() {
             }
         }
     }
+}
 
-
+@OptIn(ExperimentalMaterialApi::class)
+@Composable
+fun UserListContent(calculateBottomPadding: Dp) {
+    LazyColumn(
+        modifier = Modifier.background(BgColor),
+        contentPadding = PaddingValues(
+            top = 10.dp,
+            start = 10.dp,
+            end = 10.dp,
+            bottom = calculateBottomPadding + 10.dp
+        ),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        items(userList) { item: String ->
+            Card(shape = RoundedCornerShape(10.dp), elevation = 2.dp) {
+                ListItem(
+                    modifier = Modifier.clickable {},
+                    icon = {
+                        Image(
+                            modifier = Modifier
+                                .size(40.dp)
+                                .clip(CircleShape),
+                            painter = painterResource(id = R.drawable.avtar),
+                            contentDescription = null
+                        )
+                    },
+                    secondaryText = {
+                        Text(text = "Secondary text", color = Color.LightGray)
+                    }
+                ) {
+                    Text(text = item, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                }
+            }
+        }
+    }
 }
 
 val userList = listOf(

@@ -52,8 +52,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.miracle.miraclekit.Activity.AppBarTabPage
-import com.miracle.miraclekit.Activity.BottomAppBarNavPage
+import com.miracle.miraclekit.BottomAppBarNav.AppBarTabPage
+import com.miracle.miraclekit.BottomAppBarNav.BottomAppBarNavPage
 import com.miracle.miraclekit.Activity.ButtonPage
 import com.miracle.miraclekit.Activity.ImagePage
 import com.miracle.miraclekit.Activity.LayoutPage

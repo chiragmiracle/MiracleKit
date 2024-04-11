@@ -19,8 +19,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.miracle.miraclekit.theme.Clr1
-import com.miracle.miraclekit.theme.White
+import com.miracle.miraclekit.theme.Clr2
 
 @Composable
 fun DrawerButton(
@@ -41,7 +40,7 @@ fun DrawerButton(
         Color.Black
     }
     val backgroundColor = if (isSelected) {
-        Clr1
+        Clr2
     } else {
         Color.Transparent
     }
